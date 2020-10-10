@@ -1,0 +1,35 @@
+﻿@page "/vehicles/create"
+
+@inject BlazorApp1.Core.Services.IVehicleService vehicleService
+@inject NavigationManager nav
+
+<h3>CreateVehicle</h3>
+
+<EditForm Model="@model" OnValidSubmit="ValidSubmit">
+
+    <label for="Year">Year</label>
+    <InputNumber @bind-Value="model.Year"></InputNumber>
+
+    <label for="Make">Make</label>
+    <InputText @bind-Value="model.Make"></InputText>
+
+    <label for="Model">Model</label>
+    <InputText @bind-Value="model.Model"></InputText>
+
+    <label for="Mileage">Miles</label>
+    <InputNumber @bind-Value="model.Mileage"></InputNumber>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+
+</EditForm>
+
+@code {
+
+    public BlazorApp1.ViewModels.CreateVehicleViewModel model = new ViewModels.CreateVehicleViewModel(2020, "", "", 0);
+
+    private void ValidSubmit()
+    {
+        vehicleService.Save(model);
+        nav.NavigateTo("/vehicles/list");
+    }
+}

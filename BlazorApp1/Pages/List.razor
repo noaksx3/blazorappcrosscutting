@@ -1,0 +1,41 @@
+﻿@page "/vehicles/list"
+
+@inject BlazorApp1.Core.Services.IVehicleService vehicleService
+
+<h3>List</h3>
+
+<table class="table table-primary">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Year</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Mileage</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var v in model)
+        {
+            <tr>
+                <td>@v.Id</td>
+                <td>@v.Year</td>
+                <td>@v.Make</td>
+                <td>@v.Model</td>
+                <td>@v.Mileage</td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+@code {
+
+    private IEnumerable<BlazorApp1.Core.Models.IVehicle> model;
+
+    protected override void OnInitialized()
+    {
+        model = vehicleService.GetVehicles();
+    }
+
+}
