@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BlazorApp1.Data\BlazorApp1.Data.csproj" />
+    <ProjectReference Include="..\BlazorApp1.Persistence\BlazorApp1.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

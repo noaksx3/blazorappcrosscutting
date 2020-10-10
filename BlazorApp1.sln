@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1", "BlazorApp1\BlazorApp1.csproj", "{B2456D99-7496-484D-A127-A027438C7C75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp1", "BlazorApp1\BlazorApp1.csproj", "{B2456D99-7496-484D-A127-A027438C7C75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1.Core", "BlazorApp1.Persistence\BlazorApp1.Core.csproj", "{5DE40D85-5FD8-4C62-B8E3-22FD9C43C15A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp1.Core", "BlazorApp1.Core\BlazorApp1.Core.csproj", "{5DE40D85-5FD8-4C62-B8E3-22FD9C43C15A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1.Data", "BlazorApp1.Data\BlazorApp1.Data.csproj", "{93D31CF4-0596-42D5-95A0-A221190FD552}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp1.Persistence", "BlazorApp1.Persistence\BlazorApp1.Persistence.csproj", "{93D31CF4-0596-42D5-95A0-A221190FD552}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -5,8 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BlazorApp1.Data\BlazorApp1.Data.csproj" />
-    <ProjectReference Include="..\BlazorApp1.Persistence\BlazorApp1.Core.csproj" />
+    <ProjectReference Include="..\BlazorApp1.Core\BlazorApp1.Core.csproj" />
   </ItemGroup>
 
 </Project>
