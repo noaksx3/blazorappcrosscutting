@@ -1,21 +1,19 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
+using BlazorApp1.Data.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+//using Microsoft.Extensions.Configuration;
 
-using BlazorApp1.Data.Extensions;
-using AutoMapper;
-using BlazorApp1.Core.Services;
-
-namespace BlazorApp1.Core.Extensions
+namespace BlazorApp1.Data.Extensions
 {
     public static class ContainerExtensions
     {
-        public static void AddBlazorApp1Core(this IServiceCollection services)
+        public static void AddBlazor1AppData(this IServiceCollection services)
         {
-            services.AddAutoMapper(typeof(ContainerExtensions));
-            services.AddBlazor1AppData();
-            services.AddTransient<IVehicleService, InMemoryVehicleService>();
+            services.AddDbContextFactory<BlazorAppDbContext>(options => options.UseInMemoryDatabase("VehicleDatabase"));
         }
     }
 }
